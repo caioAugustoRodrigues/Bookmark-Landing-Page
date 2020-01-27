@@ -1,0 +1,48 @@
+.hero {
+    position: relative;
+    top: 0;
+    margin-top: 15vh;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    &__banner {
+        height: 50%;
+        align-self: flex-start;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &__illustration {
+            width: 90%;
+            z-index: 2;
+        }
+
+        &__clip {
+            position: absolute;
+            bottom: 25%;
+            height: 50%;
+            width: 100vw;
+            z-index: 1;
+            display: flex;
+            justify-content: center;
+            justify-items: center;
+
+            &__circle {
+                height: 2rem;
+                width: 2rem;
+                clip-path: circle(50% at 75% 35%);
+                background: $primary--blue;
+            }
+
+            &__square {
+                height: 2rem;
+                width: 2rem;
+                background: $primary--blue;
+                clip-path: polygon(25% 0%, 100% 1%, 100% 100%, 25% 100%, 0% 50%);
+            }
+        }
+    }
+}

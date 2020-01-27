@@ -1,0 +1,43 @@
+$primary--blue: hsl(231, 69%, 60%);
+$primary-red: hsl(0, 94%, 66%);
+
+$secondary--lt: hsl(229, 8%, 60%);
+$secondary--dk: hsl(229, 31%, 25%);
+
+
+$font-weight:(
+    "regular": 400,
+    "medium": 500,
+);
+
+@function weight($weightname){
+    @return map-get($font-weight, $weightname );
+};
+
+@mixin transition-ease {
+    transition: all 0.2s ease-in-out;
+}
+
+@mixin media-sm {
+    @media screen and (min-width: 768px) {
+        @content; 
+    }
+}
+
+@mixin media-md {
+    @media screen and (min-width: 850px) {
+        @content; 
+    }
+}
+
+@mixin media-lg {
+    @media screen and (min-width: 1024px) {
+        @content; 
+    }
+}
+
+@mixin media-xl {
+    @media screen and (min-width: 1600px) {
+        @content; 
+    }
+}
